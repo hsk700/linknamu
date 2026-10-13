@@ -1,8 +1,10 @@
 ﻿// 실제 프로필과 링크가 준비되면 아래 더미 값을 교체하세요.
+import LinkList from "@/components/LinkList";
+
 const profile = {
-  name: "김클로",
-  bio: "세계 최강 바이브코더",
-  avatarUrl: "https://placehold.co/300x300/e7e5e4/44403c.png?text=Profile",
+  name: "황성광",
+  bio: "영진기술(주)",
+  avatarUrl: "/profile.png",
 };
 
 const links = [
@@ -19,7 +21,7 @@ export default function Home() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={profile.avatarUrl}
-            alt={`${profile.name}의 더미 프로필 사진`}
+            alt={`${profile.name}의 프로필 사진`}
             width={160}
             height={160}
             className="h-40 w-40 rounded-full border-2 border-stone-200 object-cover"
@@ -33,20 +35,7 @@ export default function Home() {
         </header>
 
         <nav aria-label="프로필 링크" className="mt-12 w-full">
-          <ul className="flex flex-col gap-4">
-            {links.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex min-h-20 w-full items-center justify-center rounded-2xl border-2 border-stone-800 bg-white px-6 py-5 text-base font-semibold transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-800"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <LinkList links={links} />
         </nav>
       </div>
     </main>
