@@ -15,7 +15,7 @@ const links = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen justify-center bg-white px-6 py-12 text-stone-900 sm:py-16">
+    <main className="flex min-h-screen justify-center bg-[#fff7ee] px-6 py-12 text-stone-900 sm:py-16">
       <div className="flex w-full max-w-sm flex-col items-center">
         <header className="flex w-full flex-col items-center text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
